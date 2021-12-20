@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.whoami.dao.StudentLog4jMapper">
+    <resultMap id="StudentLog4j" type="com.whoami.pojo.StudentLog4j">
+
+    </resultMap>
+    <select id="getStudentLog4j" resultMap="StudentLog4j">
+        select * from mysqlStudy.student
+    </select>
+    
+    <select id="getStudentLog4jByMap" resultType="Hashmap">
+        select * from mysqlStudy.student
+    </select>
+
+    <select id="getStudentLog4jByID" resultType="map">
+        select * from mysqlStudy.student where id = ${userId}
+    </select>
+
+    <select id="getStudentLog4jByLimit" resultType="map">
+        select * from mysqlStudy.student limit ${startIndex},${pageSize}
+    </select>
+</mapper>
