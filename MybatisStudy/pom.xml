@@ -13,6 +13,7 @@
         <module>mybatis-01</module>
         <module>mybatis-02</module>
         <module>log4jStudent</module>
+        <module>annotationMybatis</module>
     </modules>
 
     <properties>
