@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="mybatis-02" />
         <module name="annotationMybatis" />
+        <module name="dynamicMybatis" />
         <module name="log4jStudent" />
         <module name="mybatis-01" />
       </profile>

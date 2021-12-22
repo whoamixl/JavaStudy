@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.whoami.dao.StudentDyanmicMapper">
+<!--通过子查询
+    <select id="getSubject" resultType="com.whoami.pojo.SubjectDyanmic">
+        SELECT * from subject where id=#{subjectId}
+    </select>
+
+    <select id="getStudentSubjcet" resultMap="studentSubjcetMap">
+        SELECT * from student where subjectId=#{subjectId}
+    </select>
+    <resultMap id="studentSubjcetMap" type="com.whoami.pojo.StudentDyanmic">
+        <result column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="sex" property="sex"/>
+        <result column="age" property="age"/>
+        <association property="subjcet" column="subjectId" javaType="com.whoami.pojo.SubjectDyanmic" select="getSubject"/>
+    </resultMap>
+-->
+    <!-- 结果集映射
+        <select id="getStudentSubjcetByResult" resultMap="studentSubjcetMap">
+            SELECT
+                student.`name`,
+                `subject`.subjectName
+            FROM
+                student,
+                `subject`
+            WHERE
+                `subject`.id = student.subjectId and `subject`.id = 1
+        </select>
+        <resultMap id="studentSubjcetMap" type="com.whoami.pojo.StudentDyanmic">
+            <result column="name" property="name"/>
+            <association property="subjcet" javaType="com.whoami.pojo.SubjectDyanmic">
+                <result column="subjectName" property="subjectName"/>
+            </association>
+        </resultMap>
+      -->
+
+    <select id="getSubject" resultType="com.whoami.pojo.SubjectDyanmic">
+        SELECT * from subject where id=#{subjectId}
+    </select>
+
+    <select id="getStudentSubjcetCollection" resultMap="studentSubjcetMap">
+        SELECT * from student where subjectId=#{subjectId}
+    </select>
+</mapper>

@@ -2,8 +2,8 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.whoami.dao.StudentLog4jMapper">
-    <resultMap id="StudentLog4j" type="com.whoami.pojo.StudentLog4j">
+<mapper namespace="com.whoami.dao.StudentDyanmicMapperTest">
+    <resultMap id="StudentLog4j" type="com.whoami.pojo.StudentDyanmic">
 
     </resultMap>
     <select id="getStudentLog4j" resultMap="StudentLog4j">
