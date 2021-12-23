@@ -5,6 +5,8 @@ import com.whoami.utils.MybatisUtils_01;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class StudentMapper01Test {
@@ -72,5 +74,34 @@ public class StudentMapper01Test {
         sqlSession.commit();
         System.out.println(i);
         sqlSession.close();
+    }
+
+    @Test
+    public void getStudentByDyanmicg(){
+        SqlSession sqlSession = MybatisUtils_01.getSession();
+        StudentMapper01 mapper = sqlSession.getMapper(StudentMapper01.class);
+        HashMap<Object, Object> objectObjectHashMap = new HashMap<>();
+//        objectObjectHashMap.put("name", "小于");
+        objectObjectHashMap.put("sex",1);
+        objectObjectHashMap.put("age",22);
+        List<Student01> studentByDyanmicg = mapper.getStudentByDyanmicg(objectObjectHashMap);
+        for (Student01 student01 : studentByDyanmicg) {
+            System.out.println(student01);
+        }
+    }
+
+    @Test
+    public void getStudentByForeach(){
+        SqlSession sqlSession = MybatisUtils_01.getSession();
+        StudentMapper01 mapper = sqlSession.getMapper(StudentMapper01.class);
+        ArrayList<Object> item = new ArrayList<>();
+        item.add(22);
+        item.add(23);
+        HashMap<Object, Object> objectObjectHashMap = new HashMap<>();
+        objectObjectHashMap.put("item1",item);
+        List<Student01> studentByDyanmicg = mapper.getStudentByForeach(objectObjectHashMap);
+        for (Student01 student01 : studentByDyanmicg) {
+            System.out.println(student01);
+        }
     }
 }

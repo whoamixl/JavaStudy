@@ -4,6 +4,7 @@ import com.whoami.pojo.Student;
 import com.whoami.pojo.Student01;
 
 import java.util.List;
+import java.util.Map;
 
 public interface StudentMapper01 {
     List<Student01> getStudent01();
@@ -20,4 +21,9 @@ public interface StudentMapper01 {
 
     //删除
     int deleteStudentById(int id);
+
+    //动态sql
+    List<Student01> getStudentByDyanmicg(Map map);
+
+    List<Student01> getStudentByForeach(Map map);
 }

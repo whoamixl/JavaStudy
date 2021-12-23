@@ -19,7 +19,8 @@
         </environment>
     </environments>
     <mappers>
-        <mapper class="com.whoami.dao.StudentDyanmicMapper"/>
+<!--        <mapper class="com.whoami.dao.StudentDyanmicMapper"/>-->
+        <mapper class="com.whoami.dao.SubjectOneForMoreMapper"/>
     </mappers>
     
 </configuration>

@@ -21,4 +21,26 @@
     <delete id="deleteStudentById" parameterType="int">
         delete from mysqlStudy.student where id = #{id}
     </delete>
+
+    <select id="getStudentByDyanmicg" resultType="com.whoami.pojo.Student01">
+        select * from mysqlStudy.student WHERE 1=1
+        <if test="name != null">
+            AND name = #{name}
+        </if>
+        <if test="sex != null">
+            AND sex = #{sex}
+        </if>
+        <if test="age != null">
+            AND age = #{age}
+        </if>
+    </select>
+
+    <select id="getStudentByForeach" resultType="com.whoami.pojo.Student01">
+        select * from mysqlStudy.student where
+        age in
+        <foreach collection="item1" item="item" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+    </select>
+
 </mapper>
