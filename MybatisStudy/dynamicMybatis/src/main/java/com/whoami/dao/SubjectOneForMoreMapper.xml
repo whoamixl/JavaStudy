@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.whoami.dao.SubjectOneForMoreMapper">
+    <resultMap id="SubjectOneForMoreMap" type="com.whoami.pojo.SubjectOneForMore">
+        <result property="id" column="id"/>
+        <result property="subjectName" column="subjectName"/>
+        <collection property="StudentOneForMore" column="id" javaType="ArrayList" ofType="StudentOneForMore" select="CollectionGetStudents"/>
+    </resultMap>
+    <select id="getSubjectOneForMore" resultMap="SubjectOneForMoreMap">
+        select *
+        from subject
+        where id = #{id}
+    </select>
+    
+    <select id="CollectionGetStudents" resultType="com.whoami.pojo.StudentOneForMore">
+        select *
+        from student
+        where subjectId = #{subjcetId}
+    </select>
+
+</mapper>

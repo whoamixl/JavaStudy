@@ -6,6 +6,9 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 import java.util.Map;
 
+/****
+ * 多对一学习测试
+ */
 public interface StudentDyanmicMapper {
 //    List<StudentDyanmic> getStudentSubjcet();
 

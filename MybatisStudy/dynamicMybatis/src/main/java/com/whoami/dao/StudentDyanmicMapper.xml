@@ -37,8 +37,8 @@
             </association>
         </resultMap>
       -->
-
-    <select id="getSubject" resultType="com.whoami.pojo.SubjectDyanmic">
+<cache/>
+    <select id="getSubject" resultType="com.whoami.pojo.SubjectDyanmic" useCache="true">
         SELECT * from subject where id=#{subjectId}
     </select>
 
