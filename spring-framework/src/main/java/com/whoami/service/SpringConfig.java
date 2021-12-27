@@ -10,8 +10,8 @@ import org.springframework.core.io.ResourceLoader;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
-//@ComponentScan(basePackages = "com.whoami.service")
-//@Configuration
+@ComponentScan(basePackages = "com.whoami.service")
+@Configuration
 public class SpringConfig {
 
 //    @Bean
