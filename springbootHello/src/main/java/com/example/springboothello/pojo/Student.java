@@ -31,6 +31,6 @@ public class Student {
     @Value("1")
     private int subjectId;
 
-    @Autowired
+//    @Autowired
     private Dog dog;
 }
