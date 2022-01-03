@@ -1,0 +1,1 @@
+springboot2.6.0+   swagger2使用是需要将通过application.properties中修改spring.mvc.pathmatch.matching-strategy改为ant_path_matcher
