@@ -16,7 +16,7 @@
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
-<!--    我们需要拿到实体类，所以要配置api module-->
+    <!--    我们需要拿到实体类，所以要配置api module-->
     <dependencies>
         <dependency>
             <groupId>com.whoami</groupId>
@@ -24,59 +24,72 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
-<!--        junit-->
+        <!--        junit-->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
 
-<!--        数据库连接-->
+        <!--        数据库连接-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
-<!--        数据源-->
+        <!--        数据源-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
         </dependency>
 
-<!--        日志门面-->
+        <!--        日志门面-->
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
         </dependency>
 
-<!--        mybaties-->
+        <!--        mybaties-->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
         </dependency>
 
-<!--        test- springboot-->
+        <!--        test- springboot-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-test</artifactId>
         </dependency>
 
-<!--        web启动器-->
+        <!--        web启动器-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-<!--        jetty web服务器对于tomcat-->
+        <!--        jetty web服务器对于tomcat-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jetty</artifactId>
         </dependency>
 
-<!--        热部署"-->
+        <!--        热部署"-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
+        </dependency>
+
+<!--        eureka-->
+        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <version>2.2.10.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
     </dependencies>
 
